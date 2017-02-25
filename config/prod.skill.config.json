@@ -1,0 +1,12 @@
+{
+    "skillNamespace": "ana-assistant",
+    "skillAppID": "amzn1.ask.skill.455160b1-c042-428d-8faf-f2fa782dae67",
+    "dynamoDBTableName": "ana-assistant-users",
+    "s3": {
+        "bucketName": "ana-assistant",
+        "transKey": "translations.json"
+    },
+    "region": "us-east-1",
+    "awsProfile": "ana-assistant-profile-prod",
+    "trackingToken": "b2583a30-f589-11a6-0c19-0e61e4c2ee12"
+}

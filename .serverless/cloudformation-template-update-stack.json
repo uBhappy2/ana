@@ -1,0 +1,110 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "The AWS CloudFormation template for this Serverless application",
+  "Resources": {
+    "ServerlessDeploymentBucket": {
+      "Type": "AWS::S3::Bucket"
+    },
+    "SkillLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/ana-assistant-service/dev/1488045958509-2017-02-25T18:05:58.509Z/ana-assistant-service.zip"
+        },
+        "FunctionName": "ana-assistant-service-dev-skill",
+        "Handler": "main.handler",
+        "MemorySize": 128,
+        "Role": {
+          "Fn::GetAtt": [
+            "lambdaRole",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs4.3",
+        "Timeout": 6
+      },
+      "DependsOn": [
+        "lambdaRole"
+      ]
+    },
+    "SkillLambdaVersion7MBayv6dJqe4mB4qQ1ABawHCe41tPSrIRbbteMScL0s": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "SkillLambdaFunction"
+        },
+        "CodeSha256": "7MBayv6dJqe4mB4qQ1ABawHCe41tPSrIRbbteMScL0s="
+      }
+    },
+    "SkillLambdaPermissionAlexaSkill": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "SkillLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "alexa-appkit.amazon.com"
+      }
+    },
+    "lambdaRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "RoleName": "ana-assistant-service-dev-us-east-1-lambdaRole",
+        "Path": "/",
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "lambda.amazonaws.com"
+                ]
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "ana-assistant-service-dev-lambdaPolicy",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                  ],
+                  "Resource": "arn:aws:logs:us-east-1:*:*"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "ServerlessDeploymentBucketName": {
+      "Value": {
+        "Ref": "ServerlessDeploymentBucket"
+      }
+    },
+    "SkillLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "SkillLambdaVersion7MBayv6dJqe4mB4qQ1ABawHCe41tPSrIRbbteMScL0s"
+      }
+    }
+  }
+}
