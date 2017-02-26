@@ -1,0 +1,39 @@
+GetDrugInfoIntent drug info
+GetDrugInfoIntent lookup my drug
+GetDrugInfoIntent tell me my drugs
+GetDrugInfoIntent give me my drugs
+GetDrugInfoIntent give me a new drug
+GetDrugInfoIntent tell me a new drug
+GetDrugInfoIntent give me a drug
+GetDrugInfoIntent tell me a drug
+GetDrugInfoIntent give me some drug info
+GetDrugInfoIntent tell me some drug info
+GetDrugInfoIntent tell me my drug information
+GetDrugInfoIntent give me my drug information
+GetDrugInfoIntent prescription info
+GetDrugInfoIntent tell me my prescriptions
+GetDrugInfoIntent give me my prescriptions
+GetDrugInfoIntent give me a new prescription
+GetDrugInfoIntent tell me a new prescription
+GetDrugInfoIntent give me a prescription
+GetDrugInfoIntent tell me a prescription
+GetDrugInfoIntent give me some prescription info
+GetDrugInfoIntent tell me some prescription info
+GetDrugInfoIntent tell me my prescription information
+GetDrugInfoIntent give me my prescription information
+
+ScheduleDrugInfoIntent schedule {Drug} for {Date}
+ScheduleDrugInfoIntent remind me on {Date} to take {Drug}
+ScheduleDrugInfoIntent tell me to take {Drug} on {Date}
+ScheduleDrugInfoIntent set a reminder to take {Drug} on {Date}
+
+LogInfoIntent logs
+LogInfoIntent give me my logs
+LogInfoIntent get me log info
+LogInfoIntent tell me my log info
+
+AMAZON.StopIntent stop
+AMAZON.StopIntent off
+AMAZON.StopIntent end
+AMAZON.StopIntent quit
+AMAZON.StopIntent goodbye

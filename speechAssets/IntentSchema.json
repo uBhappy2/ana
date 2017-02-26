@@ -1,0 +1,35 @@
+{
+  "intents": [
+    {
+      "intent": "LogInfoIntent"
+    },
+    {
+      "intent": "GetDrugInfoIntent"
+    },    
+    {
+      "intent": "ScheduleDrugInfoIntent",
+      "slots": [
+        {
+          "name": "Drug",
+          "type": "LIST_OF_DRUGS"
+        },
+        {
+          "name": "Date",
+          "type": "AMAZON.DATE"
+        }
+      ]      
+    },    
+    {
+      "intent": "AMAZON.RepeatIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}

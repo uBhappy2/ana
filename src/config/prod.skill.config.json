@@ -1,0 +1,12 @@
+{
+    "skillNamespace": "ana-health",
+    "skillAppID": "amzn1.ask.skill.f775d341-7617-4460-94b9-ec26816cbb04",
+    "dynamoDBTableName": "ana-health-users",
+    "s3": {
+        "bucketName": "ana-health",
+        "transKey": "translations.json"
+    },
+    "region": "us-east-1",
+    "awsProfile": "ana-health-profile-prod",
+    "trackingToken": "b2583a30-f589-11a6-0c19-0e61e4c2ee12"
+}

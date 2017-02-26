@@ -1,0 +1,67 @@
+{
+  "en": {
+    "translation": {
+      "skill": {
+        "name": "Ana Health"
+      },
+      "about": {
+        "contentVersion": 1,
+        "lastUpdated": "2017-01-12"
+      },
+      "welcome": {
+        "speechOutput": "%s can get your drug info, schedule reminders and maybe do other things.  For more details, say help. So, what would you like?",
+        "reprompt": "What can I help you with?"
+      },
+      "logs": {
+        "speechOutput": "Welcome, you have logged in %d times.",
+        "reprompt": "What would you like to do, check your drug info or set a reminder?"
+      },
+      "reminder": {
+        "confirmation": "Ok, I will add the reminder to your calendar",
+        "reprompt": "What can I help you with?"
+      },
+      "help": {
+        "speechOutput": "Here are some things you can say: %s If you're done, you can also say: stop. So, how can I help?",
+        "reprompt": "How can I help you?"
+      },
+      "reprompts": [
+        "How can I help you?",
+        "What can I help you with?",
+        "So, how can I help?",
+        "So, what would you like me to tell you?"
+      ],
+      "sampleCommands": [
+        "Tell me my drug info.",
+        "Set a drug reminder.",
+        "Give me my logs.",
+        "Repeat."
+      ],
+      "unhandled": {
+        "speechOutput": "Can you please repeat your request?",
+        "reprompt": "If you are not sure what to ask, say help. To end, you can say: stop."
+      },
+      "goodbye": {
+        "speechOutput": "Goodbye and Thank you! <audio src='https://s3.amazonaws.com/%s/audio/beam.mp3' />"
+      },
+      "drugList": {
+        "speechOutput": "Here is a list of your current drugs: "
+      },
+      "drugs": [
+        "Chloral hydrate - 50 microgram - used to aid sleep.",
+        "Digoxin - 100 microgram - used to treat heart failure or abnormal heart rhythms.",
+        "Dipyridamole - 250 micrograms - used to reduce the risk of blood clots or to improve blood flow.",
+        "Aspirin - 300 micrograms - used to treat mild to moderate pain, and also to reduce fever or inflammation."
+      ],
+
+      "getDrug": {
+        "title": "Drug %d",
+        "invalidIndex": "I cannot find drug %d. Currently, I have %d drugs that I can share. Please ask for a different drug number, a new drug, or give me a different instruction.",
+        "cardImages": {
+          "smallImageUrl": "https://s3.amazonaws.com/%s/images/image_small.jpg",
+          "largeImageUrl": "https://s3.amazonaws.com/%s/images/image_large.jpg"
+        }
+      }
+    }
+  }
+}
+
